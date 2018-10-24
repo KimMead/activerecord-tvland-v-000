@@ -9,7 +9,8 @@ class Actor < ActiveRecord::Base
   def list_roles
     roles = []
     array_of_characters = self.characters.map {|character| character.name}
-    array_of_shows = self.shows.map {|shows| shows.name}
+    array_of_shows = self.shows.map {|shows| show.name}
+    roles = array_of_characters
 
   end
 end
